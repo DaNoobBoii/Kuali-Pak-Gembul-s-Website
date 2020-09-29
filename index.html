@@ -6,30 +6,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="fullpage.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="page-transition.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Official Website | Kuali Pak Gembul</title>
   <script src="fullpage.js"></script>
 </head>
 
 <body>
   <nav class="navbar">
     <div class="logo">
-      <h3>Kuali Pak Gembul</h3>
+      <a href="index.html">
+        <h3>Kuali Pak Gembul</h3>
+      </a>
     </div>
     <ul class="navlinks">
-      <div class="dropdown">
-        <li><a href="#">Menu Kami <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
-        <div class="dropdown-content">
-          <ul>
-            <li><a href="#">Ayam Geprek </a></li>
-            <li><a href="#">Chinese Food</a></li>
-            <li><a href="#">Mie</a></li>
-          </ul>
-        </div>
-      </div>
       <li><a href="about.html">Tentang Kami</a></li>
-      <li><a href="#">Hubungi Kami</a></li>
+      <li><a href="contact.html">Hubungi Kami</a></li>
     </ul>
     <div class="burger" onclick="change(this)">
       <div class="line1"></div>
@@ -88,6 +81,44 @@
       </div>
     </div>
 
+    <div class="section action-center">
+      <div class="slide">
+        <h1 class="action-title">Link Center</h1>
+      </div>
+      <div class="slide">
+        <ul class="action-card">
+          <li class="action-card-title">
+            <h2>Tentang Kami <br> <i class="fa fa-users" aria-hidden="true"></i></h2>
+          </li>
+          <li class="action-card-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic commodi laboriosam laborum facere dolore.
+              Laudantium optio alias perferendis dolor molestiae. Rerum ea nesciunt magni repellendus voluptas ullam
+              provident deleniti cumque!</p>
+          </li>
+          <li class="action-card-content">
+            <a href="about.html" class="action-link">Let's Go! <i class="fa fa-long-arrow-right"
+                aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="slide">
+        <ul class="action-card">
+          <li class="action-card-title">
+            <h2>Hubungi Kami <br> <i class="fa fa-phone" aria-hidden="true"></i></h2>
+          </li>
+          <li class="action-card-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic commodi laboriosam laborum facere dolore.
+              Laudantium optio alias perferendis dolor molestiae. Rerum ea nesciunt magni repellendus voluptas ullam
+              provident deleniti cumque!</p>
+          </li>
+          <li class="action-card-content">
+            <a href="contact.html" class="action-link">Let's Go! <i class="fa fa-long-arrow-right"
+                aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <div class="section">
       <div class="brand">
         <h1 class="brand-title">Tersedia Di :</h1>
@@ -96,11 +127,11 @@
         </div>
         <p class="copyrights">&copy 2020 Kuali Pak Gembul&trade;</p>
       </div>
-
     </div>
   </div>
 
   <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 </body>
 
 </html>

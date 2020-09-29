@@ -59,7 +59,7 @@ html.fp-enabled,
     -khtml-user-select: none; /* webkit (konqueror) browsers */
     -ms-user-select: none; /* IE10+ */
     position: absolute;
-    z-index: 4;
+    z-index: 99;
     top: 50%;
     cursor: pointer;
     padding: 0 2rem;
@@ -70,6 +70,30 @@ html.fp-enabled,
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+    transition: 3s ease;
+}
+.fp-controlArrow:hover {
+    transform: scale(1.08)
+}
+@media screen and (max-width:768px) {
+	.fp-controlArrow {
+    		-webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    		-moz-user-select: none; /* mozilla browsers */
+    		-khtml-user-select: none; /* webkit (konqueror) browsers */
+    		-ms-user-select: none; /* IE10+ */
+    		position: absolute;
+    		z-index: 4;
+    		top: 50%;
+    		cursor: pointer;
+    		padding: 0 .5rem;
+    		width: 0;
+    		height: 0;
+    		border-style: solid;
+    		margin-top: -38px;
+    		-webkit-transform: translate3d(0,0,0);
+    		-ms-transform: translate3d(0,0,0);
+    		transform: translate3d(0,0,0);
+	}
 }
 .fp-controlArrow.fp-prev {
     left: 15px;

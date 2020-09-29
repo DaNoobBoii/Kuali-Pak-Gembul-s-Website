@@ -22,19 +22,33 @@ body {
     width: 100%;
     padding: 1rem 5rem;
     position: fixed;
-    background: rgb(35, 35, 35, 0.5);
     transition: .3s ease;
     z-index: 100;
+    text-shadow: .3px .3px 2px black;
+    background: rgb(35, 35, 35, .75);
 }
 
 .navbar:hover {
-    background: rgb(35, 35, 35);
+    background: rgb(35, 35, 35, .75);
 }
 
 .logo {
     color: whitesmoke;
     letter-spacing: 5px;
     text-transform: uppercase;
+}
+
+.logo a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.logo a h3 {
+    transition: .3s ease;
+}
+
+.logo a h3:hover {
+    transform: scale(1.08);
 }
 
 .navlinks {
@@ -66,7 +80,7 @@ body {
         justify-content: space-around;
     }
     .navlinks {
-        background: #383838;
+        background: rgb(56, 56, 56, .75);
         height: 92vh;
         width: 100%;
         top: 0;
@@ -91,7 +105,7 @@ body {
         justify-content: space-around;
     }
     .navlinks {
-        background: #383838;
+        background: rgb(56, 56, 56, .75);
         height: 92vh;
         width: 100%;
         top: 0;
@@ -129,6 +143,7 @@ body {
     background: whitesmoke;
     margin: 3px;
     transition: 0.4s;
+    box-shadow: .3px .3px 2px black;
 }
 
 /* putar bar ke 1 */
@@ -206,6 +221,7 @@ body {
 
 .header {
     background: url(food.illustration.png);
+    background-attachment: fixed !important;
     height: 100vh;
     width: 100%;
     top: 0;
@@ -271,13 +287,13 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border-radius: 10px;
     transition: .3s ease;
     font-family: Poppins;
     letter-spacing: 1px;
 }
 
 .card-content li:hover {
+    transition-delay: .1s;
     color: #232323;
     transform: scale(1.1);
 }
@@ -291,16 +307,25 @@ body {
 }
 
 .card-content li::before {
+    content: '';
     width: 100%;
     height: 100%;
-    content: '';
-    background: #232323;
+    background: white;
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    opacity: .5;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transition: .3s ease;
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.card-content li:hover::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
 }
 
 .card-content li::after {
@@ -313,17 +338,17 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
-    clip-path: circle(0.5% at 0 0);
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
     transition: .3s ease;
     opacity: 0;
-    border-radius: 10px;
     padding: 0;
     margin: 0;
 }
 
 .card-content li:hover::after {
-    clip-path: circle(140.9% at 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     opacity: 1;
+    transition-delay: .1s;
 }
 
 .title-card {
@@ -356,6 +381,98 @@ body {
 }
 
 /* card */
+
+/* action center */
+
+.action-center {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: orange;
+}
+
+.action-title {
+    color: #232323;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: Poppins;
+    letter-spacing: 3px;
+}
+
+.action-card {
+    list-style-type: none;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 0;
+    text-align: center;
+    justify-content: space-around;
+    color: #232323;
+    font-family: Poppins;
+}
+
+.action-card-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+}
+
+.action-card-title br {
+    display: none;
+}
+
+.action-card-title i {
+    margin-left: 2rem;
+}
+
+.action-card-content {
+    padding: 0 20rem;
+}
+
+.action-link {
+    color: black;
+    font-size: 24px;
+    transition: .3s ease;
+    text-decoration: none;
+    width: 100%;
+}
+
+.action-link i {
+    transition: .3s ease;
+    margin-left: 5px;
+}
+
+.action-link:hover i {
+    margin-left: 20px;
+}
+
+@media screen and (max-width:1024px) {
+    .action-card-content {
+        padding: 0 8rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .action-card-content {
+        padding: 2rem 6rem;
+    }
+    .action-card-title i {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+    .action-card-title br {
+        display: block;
+    }
+}
+
+/* action center */
 
 /* Brand */
 
