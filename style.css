@@ -371,10 +371,13 @@ body {
         display: flex;
         flex-direction: column;
         list-style: none;
-        margin: 6rem 1rem;
+        margin: 6rem 0rem;
+        justify-content: center;
+        align-items: center;
     }
     .card-content ul li {
-        margin: 2rem 0;
+        margin: 2rem 0 !important;
+        width: 90%;
     }
     .card-content li:hover {
         transform: none;
