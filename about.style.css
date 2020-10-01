@@ -23,6 +23,7 @@
     height: 100%;
     display: block;
     background: url(1.png);
+    background-position: center;
     opacity: .3;
     z-index: -1;
 }
@@ -31,6 +32,10 @@
     font-size: 40px;
     margin: 0 2rem;
     color: orange;
+}
+
+.about-title br {
+    display: none;
 }
 
 @media screen and (max-width:768px) {
@@ -45,6 +50,9 @@
         color: #f5f5f5;
         font-family: Poppins;
         z-index: 1;
+    }
+    .about-title br {
+        display: block;
     }
 }
 

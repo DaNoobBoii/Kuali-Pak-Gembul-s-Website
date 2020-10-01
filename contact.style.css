@@ -17,6 +17,10 @@
     z-index: 1;
 }
 
+.contact-title br {
+    display: none;
+}
+
 .contact::after {
     content: '';
     width: 100%;
@@ -45,6 +49,9 @@
         color: #f5f5f5;
         font-family: Poppins;
         z-index: 1;
+    }
+    .contact-title br {
+        display: block;
     }
 }
 
